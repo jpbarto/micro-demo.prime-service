@@ -19,9 +19,6 @@ on:
 jobs:
     build-and-test:
         runs-on: ubuntu-latest
-        defaults:
-            run:
-                working-directory: prime-service
         steps:
             - name: Checkout repository
               uses: actions/checkout@v4
