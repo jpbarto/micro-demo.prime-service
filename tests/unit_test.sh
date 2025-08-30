@@ -1,6 +1,9 @@
 #!/bin/sh
 
-docker run -d --name prime-test -p 8080:8080 prime-service | tee results.log
+docker run \
+    -d --rm \
+    --network=host \
+    prime-service | tee results.log
 
 sleep 3
 
